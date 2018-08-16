@@ -9,8 +9,8 @@ cp -v Dockerfile $tmpDir
 
 cd $tmpDir
 docker build -t srp33/wishbuilder-cli-environment .
-#docker login -u=srp33
-#docker push srp33/wishbuilder-cli
+##docker login -u=srp33
+docker push srp33/wishbuilder-cli
 
-#cd -
-#rm -rf $tmpDir
+cd -
+rm -rf $tmpDir
