@@ -1,8 +1,5 @@
 FROM ubuntu:16.04
 
-# Set the working directory to /app
-WORKDIR /app
-
 # Configure encodings
 ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 
