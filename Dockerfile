@@ -24,8 +24,10 @@ RUN echo 'export PATH=/opt/conda/bin:$PATH' > /etc/profile.d/conda.sh && \
     rm ~/anaconda.sh
 ENV PATH /opt/conda/bin:$PATH
 RUN echo "unset SUDO_UID SUDO_GID SUDO_USER" >> ~/.bashrc
-RUN conda install -y numpy=1.13.0 hdf5=1.10.1 xlrd=1.1.0 markdown requests h5py yaml pip pandas=0.22.0
-RUN pip install fastnumbers pyarrow
+#RUN conda install -y numpy=1.13.0 hdf5=1.10.1 xlrd=1.1.0 markdown requests h5py yaml pip pandas=0.22.0
+RUN conda install -y numpy hdf5 xlrd markdown requests h5py yaml pip pandas
+RUN conda install -y -c conda-forge fastnumbers pyarrow
+#RUN pip install fastnumbers pyarrow
 
 # Install R packages
 RUN R -e "install.packages(c('tidyverse', 'XML'), repos='https://rweb.crmda.ku.edu/cran/', clean=TRUE)"
