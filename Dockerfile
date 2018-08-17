@@ -29,3 +29,4 @@ RUN pip install fastnumbers pyarrow
 
 # Install R packages
 RUN R -e "install.packages(c('tidyverse', 'XML'), repos='https://rweb.crmda.ku.edu/cran/', clean=TRUE)"
+RUN R -e "source('https://bioconductor.org/biocLite.R'); biocLite('org.Hs.eg.db'); biocLite('annotate')"
