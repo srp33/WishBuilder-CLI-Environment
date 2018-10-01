@@ -18,7 +18,7 @@ RUN echo "deb http://cran.rstudio.com/bin/linux/ubuntu xenial/" | tee -a /etc/ap
  && /bin/bash ~/anaconda.sh -b -p /opt/conda \
  && rm ~/anaconda.sh \
  && conda install -y numpy hdf5 xlrd markdown requests h5py yaml pip pandas \
- && conda install -y -c conda-forge fastnumbers pyarrow capturer \
+ && conda install -y -c conda-forge pyarrow capturer \
  && R -e "install.packages(c('tidyverse', 'XML'), repos='https://rweb.crmda.ku.edu/cran/', clean=TRUE)" \
  && R -e "source('https://bioconductor.org/biocLite.R'); biocLite('org.Hs.eg.db'); biocLite('annotate')" \
  && cd /tmp; git clone https://github.com/srp33/ShapeShifter.git; mv ShapeShifter/ShapeShifter /
